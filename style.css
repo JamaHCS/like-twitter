@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.like {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-image: url('./corazon.png');
+  background-size: 1450px 50px;
+  /* background-position: -2800px 0; */
+}
+
+.like.animate {
+  animation-name: like;
+  animation-duration: 1s;
+  animation-timing-function: steps(28);
+  animation-iteration-count: 1;
+  /* animation-direction: normal; */
+  animation-fill-mode: forwards;
+}
+
+@keyframes like {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: right 0;
+  }
+}
